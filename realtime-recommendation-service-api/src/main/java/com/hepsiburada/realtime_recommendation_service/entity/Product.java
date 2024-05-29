@@ -3,7 +3,6 @@ package com.hepsiburada.realtime_recommendation_service.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.UUID;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,8 +13,7 @@ import java.util.UUID;
 @Table(name = "products")
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID productId;
+    private String productId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")

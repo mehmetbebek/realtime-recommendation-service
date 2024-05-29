@@ -5,7 +5,6 @@ import lombok.*;
 
 import java.io.Serializable;
 import java.util.Set;
-import java.util.UUID;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,8 +15,7 @@ import java.util.UUID;
 @Table(name = "categories")
 public class Category implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID categoryId;
+    private String categoryId;
 
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<Product> products;

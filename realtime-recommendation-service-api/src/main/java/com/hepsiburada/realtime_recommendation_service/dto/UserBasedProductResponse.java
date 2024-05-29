@@ -10,7 +10,7 @@ import java.util.List;
 @Getter
 @Builder
 @Setter
-public class UserBasedBrowsingHistoryResponse {
+public class UserBasedProductResponse {
     private String userId;
     private List<String> products;
     private UserBasedBrowsingHistoryType type;

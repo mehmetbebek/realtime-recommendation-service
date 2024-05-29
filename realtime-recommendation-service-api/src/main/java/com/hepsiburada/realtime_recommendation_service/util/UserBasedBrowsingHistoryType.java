@@ -8,7 +8,8 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum UserBasedBrowsingHistoryType {
-    PERSONALIZED("personalized");
+    PERSONALIZED("personalized"),
+    NON_PERSONALIZED("non-personalized");
 
     private final String value;
 

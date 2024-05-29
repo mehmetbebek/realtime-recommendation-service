@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,8 +14,7 @@ import java.util.UUID;
 @Table(name = "order_items")
 public class OrderItem implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    private String id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id")
